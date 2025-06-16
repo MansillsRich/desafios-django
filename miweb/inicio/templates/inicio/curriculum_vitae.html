@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículum Vitae - Richard Mansilla</title>
+    <style>
+        body {  
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color:rgb(112, 41, 41);
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 89, 255);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .title-block {
+            flex: 1;
+        }
+
+        .emoji-derecha {
+            width: 80px;
+            height: auto;
+            border-radius: 30px;
+            margin-left: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="title-block">
+                <h1 class="title">Richard Mansilla</h1>
+                <p class="subtitle">Estudiante TINF Vespertino · Temuco, Chile · mansillasrich@email.com · +56 9 7675 6170</p>
+            </div>
+            <img src="https://i.pinimg.com/736x/c4/7b/61/c47b6141d1d1fbd49acb9ec9382f5c4e.jpg" 
+                    alt="Soy ese" 
+                    title="soy ese"
+                    class="emoji-derecha">
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>Perfil Profesional</h2>
+            <p>Soy una persona dinámica, apasionado por la tecnología y en constante aprendizaje. Me especializo en redes, bases de datos y desarrollo web con enfoque en soluciones prácticas y funcionales.</p>
+        </div>
+
+        <div class="section">
+            <h2>Educación</h2>
+            <ul>
+                <li><strong>Educación Superior</strong> Universidad Católica de Temuco - Técnico Universitario en Informática (Presente)</li>
+                <li><strong>Enseñanza Media</strong> – Liceo Politécnico de Castro - Técnico en Construcción con menciones de la construcción (Graduado en 2024)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li>Redes (VLAN, Packet Tracer, direccionamiento IP)</li>
+                <li>Desarrollo web (HTML, CSS, Python con Django y Flask)</li>
+                <li>Bases de datos (MySQL, SQLite)</li>
+                <li>Git y GitHub</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Proyectos Destacados</h2>
+            <ul>
+                <li><strong>Configuración de red VLAN</strong> – Proyecto en Packet Tracer para empresa simulada.</li>
+                <li><strong>Aplicación de gestión</strong> – Proyecto Django para administrar datos de empleados.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español (nativo)</li>
+                <li>Inglés (Avanzado)</li>
+                <li>Francés (Elemental)</li>
+            </ul>
+        </div>
+
+        <hr>
+        <h2>¿Te gustaría que te contacte?</h2>
+        <form action="/gracias/" method="post">
+            {% csrf_token %}
+
+            <label for="email">Tu correo electrónico:</label><br>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required><br><br>
+
+            <p><strong>¿Qué te pareció mi currículum?</strong></p>
+            <input type="checkbox" id="bueno" name="opinion" value="Bueno">
+            <label for="bueno">Bueno</label><br>
+
+            <input type="checkbox" id="pasable" name="opinion" value="Pasable">
+            <label for="pasable">Pasable</label><br>
+
+            <input type="checkbox" id="malo" name="opinion" value="Malo">
+            <label for="malo">Malo</label><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

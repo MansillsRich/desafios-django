@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+    <style>
+        body {
+            background-color:rgb(73, 199, 225);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Mi sitio en Django</h1></header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <img src="https://i.pinimg.com/736x/c4/7b/61/c47b6141d1d1fbd49acb9ec9382f5c4e.jpg" alt="Meme" width="300" height="300">
+</body>
+</html>
